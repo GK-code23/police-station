@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>LOST AND FOUND DEPARTMENT</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'fir/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="bg-container-contact100" style="background-image: url({% static 'fir/images/icons/mh2.jpg' %});"">
+		<div class="contact100-header flex-sb-m">
+
+
+
+
+		</div>
+	</div>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+
+
+			<div class="contact100-form-title" style="background-image: url({% static 'fir/images/icons/mh2.jpg' %});">
+				<span>LOST AND FOUND DEPARTMENT</span>
+			</div>
+
+			<form class="contact100-form validate-form" method="POST" action="/lost_and_found">
+				{% csrf_token %}
+				<div class="wrap-input100 validate-input">
+					<input  class="input100"   type="text" name="full_name"  maxlength="100" required id="id_full_name" placeholder="NAME"{{form.full_name}}
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<input  class="input100" type="number" name="phone_no" maxlength="10" required id="id_phone_no" placeholder="CONTACT NO:" {{form.phone_no}}
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="address" maxlength="200" required id="id_address" placeholder="Address" {{form.address}}</textarea>
+					<span class="focus-input100"></span>
+					<label class="label-input100 rs1" for="message">
+						<span class="lnr lnr-bubble"></span>
+					</label>
+				</div>
+
+
+
+				<div class="wrap-select100 validate-select">
+					<select  class="select100" type="text" name="report_type" maxlength="100" required id="id_report_type" placeholder="REPORT TYPE(LOST/FOUND)" {{form.report_type}}>
+					<option value="LOST">LOST</option>
+    <option value="FOUND">FOUND</option>
+    <				<span class="focus-select100"></span></select>
+					<label class="label-select100" for="id_pol_post">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+
+
+				<div class="wrap-select100 validate-select">
+					<select  class="select100" type="text" name="article_type" maxlength="50" required id="id_article_type" placeholder="ARTICLE TYPE(CASH/JEWELLERY/ELECTRONIC/VEHICLE/OTHERS)" {{form.article_type}}>
+					<option value="CASH">CASH</option>
+    <option value="JEWELLARY">JEWELLERY</option>
+    <				<option value="ELECTRONIC">ELECTRONIC</option>
+						<option value="VEHICLE">VEHICLE</option>
+						<option value="OTHERS">OTHERS</option>
+						<span class="focus-select100"></span></select>
+					<label class="label-select100" for="id_pol_post">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+
+				<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input  class="input100" type="text" name="loc_of_incedent" maxlength="100" required id="id_loc_of_incedent" placeholder="Location Of Incedent" {{form.loc_of_incedent}}
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+				<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input  class="input100" type="date" name="date" required id="id_date" placeholder="Date" {{form.date}}
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+				<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="doc_id" maxlength="30" required id="id_doc_id" placeholder="Document ID/IMEI NO" {{form.doc_id}}
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+
+
+				<div class="wrap-input100 validate-input">
+					<textarea id= class="input100" type="text"name="descrip" cols="40" rows="10" maxlength="100" required id="id_descrip" placeholder="Description" {{form.descrip}}</textarea>
+					<span class="focus-input100"></span>
+					<label class="label-input100 rs1" for="message">
+						<span class="lnr lnr-bubble"></span>
+					</label>
+				</div>
+	<p><b>ON DESK</b></p>
+	<br></br>
+	<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input  class="input100" type="text" name="pol_name" maxlength="100" required id="id_pol_name" placeholder="Police Inspector name" {{form.pol_name}}
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+				<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input  class="input100" type="number" name="pol_id" required id="id_pol_id" placeholder="Buckel Number" {{form.pol_id}}
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+					<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input  class="input100" type="text" name="police_station" required id="id_pol_id" placeholder="Police Station" {{form.police_station}}
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						SUBMIT
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'fir/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'fir/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/js/main.js' %}"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>

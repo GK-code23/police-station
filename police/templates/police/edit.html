@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Police Complaint System</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'fir/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fir/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="bg-container-contact100" style="background-image: url({% static 'fir/images/icons/mh2.jpg' %});">
+		<div class="contact100-header flex-sb-m">
+
+
+
+
+		</div>
+	</div>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+
+
+			<div class="contact100-form-title" style="background-image: url({% static 'fir/images/icons/mh2.jpg' %});">
+				<span>First Information Report</span>
+			</div>
+
+			<form class="contact100-form validate-form" method="POST" action="/update/{{police.pol_id}}">
+				{% csrf_token %}
+				<div class="wrap-input100 validate-input">
+					<input  class="input100"   type="number" name="pol_id" required id="id_pol_id" value={{police.pol_id}}>
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="id_pol_id">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<input  class="input100" type="text" name="pol_name" maxlength="20" required id="id_pol_name" value={{police.pol_name}}>
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="id_pol_name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+				
+
+				
+
+<div class="wrap-select100 validate-select">
+					<select  class="select100"  type="text" name="pol_post" maxlength="10" required id="id_pol_post"  value={{police.pol_post}}>
+					<option value="I.P.S.">I.P.S.</option>
+    <option value="P.I.">P.I.</option>
+    <option value="P.S.I.">P.S.I.</option>
+    <option value="A.P.I.">A.P.I.</option>
+    <option value="A.S.I.">A.S.I.</option>
+    <option value="H.C.">H.C.</option>
+    <option value="P.N.">P.N.</option>
+    <option value="P.C.">P.C.</option>
+					<span class="focus-select100"></span></select>
+					<label class="label-select100" for="id_pol_post">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<input class="input100"   type="date" name="pol_join" required id="id_pol_join" value={{police.pol_join}}>
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="id_pol_join">
+						<span class="lnr lnr-smartphone m-b-2"></span>
+					</label>
+				</div>
+				<div class="wrap-input100 validate-input">
+					<select  class="select100"  type="text" name="pol_dept" maxlength="20" required id="id_pol_dept" value={{police.pol_dept}}>
+
+    <option value="investigatation">investigatation</option>
+    <option value="tablework">tablework</option>
+    <option value="patrolling">patrolling</option>
+
+
+					<span class="focus-select100"></span></select>
+					<label class="label-select100" for="id_pol_dept">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+
+				<div class="wrap-input100 validate-input">
+					<select  class="select100"  type="text" name="gender" maxlength="20" required id="id_gender" value={{police.gender}}>
+
+    <option value="MALE">MALE</option>
+    <option value="FEMALE">FEMALE</option>
+
+
+
+					<span class="focus-select100"></span></select>
+					<label class="label-select100" for="id_gender">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+
+
+				<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input  class="input100"  type="text" name="secret_key" maxlength="20" required id="id_secret_key"   value={{police.secret_key}}>
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="id_secret_key">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+				<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input class="input100" type="password" name="pol_pass" maxlength="10" required id="id_pol_pass"  value={{police.pol_pass}}>
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="id_pol_pass">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+
+			
+								<div class="wrap-select100 validate-select">
+					<select  class="select100"  type="text" name="off_day" maxlength="20" required id="id_off_day" value={{police.off_day}}>
+					 <option value="monday">Monday</option>
+    <option value="tuesday">Tuesday</option>
+    <option value="wednesday">Wednesday</option>
+    <option value="thirsday">Thirsday</option>
+    <option value="friday">Friday</option>
+    <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday</option></select>
+
+
+					<span class="focus-select100"></span></select>
+					<label class="label-select100" for="id_off_day">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+	<br></br>
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						SUBMIT
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'fir/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'fir/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'fir/js/main.js' %}"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>

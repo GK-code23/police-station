@@ -1,0 +1,277 @@
+{% load static %}
+<html>
+<head>
+  <meta name="viewport"
+  content="width=device-width,initial-scale=1">
+</head>
+<style>
+	#m1 {
+  text-shadow: 2px 2px 5px blue;
+}
+#button1 {
+  border-radius: 12px;
+
+
+}
+#button2 {
+  border-radius: 12px
+
+
+
+}
+#button3 {
+  border-radius: 12px
+
+
+}
+#button4 {
+  border-radius: 12px
+
+
+
+
+
+}
+#myDIV {
+  width: 1400px;
+  height: 400px;
+  background-repeat: no-repeat, repeat;
+  background-image:url(newimage.jpg);
+  background-blend-mode: lighten;
+}
+#example1 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+#example2 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+
+.form button {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  outline: 1;
+  background: #55BCC9;
+  width: 13%;
+  border: 0;
+  padding: 13px;
+  color: black;
+  font-size:11px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor:pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  text-decoration: none;
+  background:lightblue;
+}
+.dropbtn {
+
+
+  transition: all 2s ease-in-out 0s,visibility 0s linear 0.3s,z-index 0s,linear 0.01s;
+ font-family:verdana;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 190%;
+  top: 100%;
+  border: 0;
+  padding:20px;
+  color: #FFFFFH;
+  font-size:14px;
+  -webkit-transition: all 5 ease;
+
+  cursor: pointer;
+
+
+
+}
+.dropbtn:hover,.dropbtn:active,.dropbtn:focus {
+  background: lightblue;
+}
+.dropdown {
+  position: relative;
+  display:inline;
+
+}
+
+.dropdown-content {
+  display: none;
+  position:absolute;
+  right: 0;
+  background-color:skyblue;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+border-radius:12px;
+
+
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 16px 16px;
+  text-decoration: none;
+  display: block;
+
+
+}
+
+.dropdown-content a:hover {background-color: #e9e9e9;
+display:inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
+.dropdown:hover .dropbtn {
+  background-color:lightblue;
+
+}
+
+
+#example {
+  border: 2px solid black;
+  padding: 3px;
+  background: url({% static 'myimage/photo.jpg' %});
+  background-repeat: repeat;
+  background-color: transparent;
+  background-size: 1400px 800px
+}
+
+
+
+
+</style>
+<head>
+
+</head>
+<body>
+<body background=" ">
+
+<div id="example">
+<div style="border:2px height:0%;padding:10px;margin:0px;margin-top:1px;">
+<div id="m1" style="border:2px height:10%;padding:0px;width:1080;float:right;margin-top:1px;">
+	<p><center><font size=45><font face="georgia" ><b>POLICE STATION MANAGEMENT SYSTEM</font></b></font></center></p>
+	<center><b><i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp||सद्रक्षणाय खलनिग्रहणाय ||<i></b></center>
+</div id="example1">
+
+
+<img src ="{% static 'myimage/picture1.jpg' %}" style="height:140px;width:170px;padding-bottom:15px;margin-top:1px">
+</div>
+
+	<div class="form button">
+<div class="myDIV"></div>
+<div class="example2">
+	<div class="w3-container">
+
+
+<div class="dropdown">
+  <button id="button3" class="dropbtn"><font color="black"><b><font size="">Schedule</font></b></font></button>
+  <div class="dropdown-content">
+    <ul><a href="/show"><b>Todays Schedule</b></a>
+      <a href="/daily_chart"><b>Schedule Updation</b></a>
+    </ul>
+
+
+  </div>
+</div>
+
+
+
+<div class="dropdown">
+  <button id="button2" class="dropbtn"><font color="black"><b><font size="">Complaint Section</font></b></font></button>
+  <div class="dropdown-content">
+    <ul><a href="/fir"><b>File FIR</b></a>
+      <a href="firshow"><b>FIR Records</b></a>
+        <a href="investigation_report"><b>Investigation Updates</b></a>
+    </ul>
+
+
+  </div>
+</div>
+
+
+<div class="dropdown">
+  <button id="button3" class="dropbtn"><font color="black"><b><font size="">Notices</font></b></font></button>
+  <div class="dropdown-content">
+    <ul><a href="noticeadd"><b>Add Notice</b></a>
+      <a href="notices"><b>Update</b></a>
+    </ul>
+
+
+  </div>
+</div>
+
+<div class="dropdown">
+  <button id="button3" class="dropbtn"><font color="black"><b><font size="">Lost & Found Records</font></b></font></button>
+  <div class="dropdown-content">
+    <ul><a href="lost_and_found"><b>File Report</b></a>
+      <a href="showlf"><b>Records</b></a>
+      <a href="request"><b>Request</b></a>
+    </ul>
+
+
+  </div>
+</div>
+
+
+
+<div class="dropdown">
+  <button id="button2" class="dropbtn"><font color="black"><b><font size="">Others</font></b></font></button>
+  <div class="dropdown-content">
+    <ul><a href="overall_record"><b>Station Records</b></a>
+      <a href="chart"><b>Performance</b></a>
+
+    </ul>
+
+
+  </div>
+</div>
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<u><b><font color="red"><font size="3.5"><a href ="piechart/{{police.pol_id}}">Welcome {{police.pol_name}}</font></a></font></font></b></u>&nbsp|&nbsp<a href="logout"> <button id="button1" type="button"><font color="black"><b><font size="">Logout</font></b></font></button></a>
+</div>
+
+<!--<div style="border:2px ;height:53%;padding:10px;margin:1px;width:74%;float:left;margin-top:10px;">
+<marquee behavior="mySlides" direction="left">
+
+<img src="index1.jpeg" style="height:330px;width:970px;padding-bottom:100px;margin-top:3px;">
+<img src="index3.jpeg" style="height:330px;width:970px;padding-bottom:100px;margin-top:3px;">
+<img src="index4.jpeg" style="height:330px;width:970px;padding-bottom:100px;margin-top:3px;">
+</marquee>
+</div>-->
+
+<div style="border:2px ;height:53%;padding:10px;margin:5px;width:18%;margin-top:5">
+<p><center><b><font size=5><font color="black"><div id="m1">Updates</div></font></font></b></center></p>
+
+<marquee behavior="scroll" direction="up">{% for notice in notices %}<b><font size=3.5>- {{notice.note1}}</font></b><br></br>
+{% endfor %}
+</marquee>
+
+</div>
+<div style="border:2px;height:0%;padding:10px;margin:1px;width:97.5%;margin-top:27%">
+</div>
+
+
+
+
+
+<hr>
+<footer><b>Copyright © 2019 Police Department System.All Rights Reserved.
+Copyright |Disclaimer| Privacy Statement| Best Viewed in IE6+, Mozilla 3+ (1024 x 768 px)belong to the respective owners.</b>
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>police Record</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static  '/style.css' %}"/>
+</head>
+<body>
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+    <tr>
+        <th>police id</th>
+        <th>police name</th>
+        <th>police post</th>
+        <th>police join</th>
+        <th>police pass</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for police in police %}
+    <tr>
+        <td>{{police.pol_id}}</td>
+        <td>{{police.pol_name}}</td>
+        <td>{{police.pol_post}}</td>
+        <td>{{police.pol_join}}</td>
+        <td>{{police.pol_pass}}</td>
+        <td>
+            <a href="/edit/{{police.pol_id}}"><span class="glyphicon plyphicon-pencil">Edit</span> </a>
+            <a href="/delete/{{police.pol_id}}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<center><a href="/main" class="btn btn-primary">Addd new Record</a> </center>
+</body>
+</html>

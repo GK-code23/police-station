@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	table, th, td {
+  border: 1px solid black;
+}
+</style>
+	<title>FC-python wrapper</title>
+
+<!-- If you are using downloaded FusionCharts libraries, uncomment the below code   -->
+<!--
+
+	{% load static %}
+   	<script type="text/javascript" src="{% static "fusioncharts/fusioncharts.js" %}"></script>
+   	<script type="text/javascript" src="{% static "fusioncharts/themes/fusioncharts.theme.fusion.js" %}"></script>
+
+-->
+
+   <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+   <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
+</head>
+<body style="font-family:'Helvetica Neue', Arial; font-size: 16px;">
+	<h3>Overall Data And Performance</h3>
+	<table>
+	<tr><th>NAME </th><th> {{police.pol_name}}</th></tr>
+	<tr><th>ID  </th><th>{{police.pol_id}}</th></tr>
+	<tr><th>POST </th><th> {{police.pol_post}}</th></tr>
+	<tr><th>JOINING DATE </th><th>{{police.pol_join}}</th></tr>
+		<tr><th>SALARY</th><th>Rs.{{police.salary}}</th></tr>
+</table>
+	<div id="chart-1">{{ output|safe }}</div>
+	<div id="chart-2">{{ output_2|safe }}</div>
+	<br/>
+	<a href="/">Back</a>
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>My first chart using FusionCharts Suite XT</title>
+<!-- Include fusioncharts core library -->
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+<!-- Include fusion theme -->
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+<script type="text/javascript">
+    FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts({
+    type: 'column2d',
+    renderAt: 'chart-container',
+    width: '1300',
+    height: '400',
+    dataFormat: 'json',
+    dataSource: {
+        // Chart Configuration
+        "chart": {
+            "caption": "Police Performance",
+            "xAxisName": "Police Name",
+            "yAxisName": "Days",
+            "numberSuffix": "",
+            "theme": "fusion",
+        },
+    "data": [
+        {% for police in police %}
+        {
+            "label": "{{police.pol_name}}({{police.pol_id}})",
+            "value": "{{police.daily_cnt}}",
+        },
+        {% endfor %}]
+    }
+});
+    fusioncharts.render();
+    });
+</script>
+</head>
+<body>
+    <div id="chart-container">FusionCharts XT will load here!</div>
+</body>
+</html>
